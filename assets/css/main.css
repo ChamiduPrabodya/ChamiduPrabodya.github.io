@@ -917,7 +917,7 @@ section::before,
   position: relative;
   overflow: hidden;
 
-  background-image: url('../img/back.jpg');
+  background-image: url('/assets/img/back.jpg');
   background-size: cover;         /* fills the area, maintains aspect ratio */
   background-position: center top; /* keeps your head in frame */
   background-repeat: no-repeat;
