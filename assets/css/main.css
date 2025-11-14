@@ -1688,6 +1688,60 @@ section::before,
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+.portfolio .portfolio-item {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio .portfolio-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-info:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.portfolio .portfolio-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.portfolio .portfolio-info p {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.portfolio .portfolio-info a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.portfolio .portfolio-info a:hover {
+  background: #0d8bf2;
+  transform: scale(1.1);
+}
+
+/* Portfolio Update v1.0 - Force cache refresh */
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
