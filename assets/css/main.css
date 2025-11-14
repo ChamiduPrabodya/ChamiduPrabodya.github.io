@@ -1571,11 +1571,14 @@ section::before,
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
-.portfolio .portfolio-content img {
+.portfolio .portfolio-content img,
+.portfolio-item img {
+  width: 100%;
+  height: 250px; /* you can change the height */
+  object-fit: cover;
+  border-radius: 15px; /* keeps rounded look */
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   filter: grayscale(30%);
-  width: 100%;
-  display: block;
 }
 
 .portfolio .portfolio-content:hover img {
