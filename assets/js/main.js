@@ -229,63 +229,64 @@
   /**
    * Handle contact form submission
    */
-  const contactForm = document.querySelector('.php-email-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const name = document.getElementById('name-field').value;
-      const email = document.getElementById('email-field').value;
-      const subject = document.getElementById('subject-field').value;
-      const message = document.getElementById('message-field').value;
-      
-      // Create data object
-      const formData = {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
-      };
-      
-      // Show loading message
-      const loading = contactForm.querySelector('.loading');
-      const errorMessage = contactForm.querySelector('.error-message');
-      const sentMessage = contactForm.querySelector('.sent-message');
-      
-      loading.style.display = 'block';
-      errorMessage.style.display = 'none';
-      sentMessage.style.display = 'none';
-      
-      // Send data to your Spring Boot backend
-      fetch('http://localhost:8080/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Network response was not ok.');
-        }
-      })
-      .then(data => {
-        // Show success message
-        loading.style.display = 'none';
-        sentMessage.style.display = 'block';
-        contactForm.reset();
-      })
-      .catch(error => {
-        // Show error message
-        loading.style.display = 'none';
-        errorMessage.style.display = 'block';
-        errorMessage.innerHTML = 'Sorry, there was an error sending your message. Please try again later.';
-        console.error('Error:', error);
-      });
-    });
-  }
+  // Temporarily disabled while setting up backend
+  // const contactForm = document.querySelector('.php-email-form');
+  // if (contactForm) {
+  //   contactForm.addEventListener('submit', function(e) {
+  //     e.preventDefault();
+  //     
+  //     // Get form data
+  //     const name = document.getElementById('name-field').value;
+  //     const email = document.getElementById('email-field').value;
+  //     const subject = document.getElementById('subject-field').value;
+  //     const message = document.getElementById('message-field').value;
+  //     
+  //     // Create data object
+  //     const formData = {
+  //       name: name,
+  //       email: email,
+  //       subject: subject,
+  //       message: message
+  //     };
+  //     
+  //     // Show loading message
+  //     const loading = contactForm.querySelector('.loading');
+  //     const errorMessage = contactForm.querySelector('.error-message');
+  //     const sentMessage = contactForm.querySelector('.sent-message');
+  //     
+  //     loading.style.display = 'block';
+  //     errorMessage.style.display = 'none';
+  //     sentMessage.style.display = 'none';
+  //     
+  //     // Send data to your Spring Boot backend
+  //     fetch('http://localhost:8080/api/contact', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(formData)
+  //     })
+  //     .then(response => {
+  //       if (response.ok) {
+  //         return response.json();
+  //       } else {
+  //         throw new Error('Network response was not ok.');
+  //       }
+  //     })
+  //     .then(data => {
+  //       // Show success message
+  //       loading.style.display = 'none';
+  //       sentMessage.style.display = 'block';
+  //       contactForm.reset();
+  //     })
+  //     .catch(error => {
+  //       // Show error message
+  //       loading.style.display = 'none';
+  //       errorMessage.style.display = 'block';
+  //       errorMessage.innerHTML = 'Sorry, there was an error sending your message. Please try again later.';
+  //       console.error('Error:', error);
+  //     });
+  //   });
+  // }
 
 })();
