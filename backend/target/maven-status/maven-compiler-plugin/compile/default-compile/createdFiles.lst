@@ -1,5 +1,0 @@
-com\chamidu\portfolio\service\ContactMessageService.class
-com\chamidu\portfolio\entity\ContactMessage.class
-com\chamidu\portfolio\PortfolioBackendApplication.class
-com\chamidu\portfolio\repository\ContactMessageRepository.class
-com\chamidu\portfolio\controller\ContactController.class
