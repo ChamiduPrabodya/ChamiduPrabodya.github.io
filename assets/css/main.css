@@ -1992,15 +1992,42 @@ section::before,
   height: 100%;
 }
 
-.contact .info-wrap:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+.contact .info-wrap h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.contact .info-wrap h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 
 @media (max-width: 575px) {
   .contact .info-wrap {
     padding: 20px;
   }
+}
+
+.contact .info-wrap p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 15px;
+}
+
+.contact .info-wrap p strong {
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
 .contact .info-item {
@@ -2085,83 +2112,6 @@ section::before,
 .contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
-}
-
-/* Enhanced Contact Information Section */
-.contact-information {
-  background-color: var(--surface-color);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
-  height: 100%;
-}
-
-.contact-information:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.contact-information h3 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: var(--heading-color);
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.contact-information h3::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--accent-color);
-  border-radius: 2px;
-}
-
-.contact-information p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 20px;
-}
-
-.contact .map-container {
-  height: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-.contact .map-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.contact iframe {
-  width: 100%;
-  height: 400px;
-  border: 0;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 575px) {
-  .contact-information {
-    padding: 25px;
-  }
-  
-  .contact-information h3 {
-    font-size: 24px;
-  }
-  
-  .contact-information p {
-    font-size: 15px;
-  }
 }
 
 .contact .php-email-form {
